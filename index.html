@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Yusuf Abdurahman Sidik</title>
+    <!-- CDN Tailwind CSS v3 resmi -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CDN Font Awesome resmi untuk ikon medsos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-white text-black font-sans antialiased scroll-smooth">
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 bg-black text-white border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold tracking-wider text-blue-500">In my Portofolio</a>
+            <nav class="space-x-6 text-sm font-medium">
+                <a href="#about" class="hover:text-blue-500 transition-colors">About Me</a>
+                <a href="#projects" class="hover:text-blue-500 transition-colors">Karya Saya</a>
+                <a href="#contact" class="hover:text-blue-500 transition-colors">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="bg-black text-white py-24 border-b border-gray-950">
+        <div class="max-w-4xl mx-auto px-4 text-center flex flex-col items-center">
+            
+            <!-- FOTO PROFIL (Sudah Diperbaiki: assets/foto-profil.jpg) -->
+            <div class="mb-6 w-36 h-36 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg bg-gray-800 flex items-center justify-center relative group">
+                <img src="assets/foto-profil.jpg.jpeg" alt="Foto Profil Yusuf Abdurahman Sidik" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="hidden absolute inset-0 bg-gray-800 text-gray-400 text-xs font-bold items-center justify-center text-center p-2">
+                    [ Gagal memuat assets/foto-profil.jpg ]
+                </div>
+            </div>
+
+            <span class="text-blue-500 font-semibold tracking-wider text-sm uppercase block mb-2">Halo, Selamat Datang</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight">Yusuf Abdurahman Sidik</h1>
+            
+            <div class="inline-block bg-blue-950/40 border border-blue-500 text-blue-400 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+                Mahasiswa Semester 1 • Prodi Teknik Informatika • Universitas Widyatama
+            </div>
+            
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+                Saya adalah seorang mahasiswa aktif dibidang teknik informatika yang berfokus mempelajari pengembangan web, algoritma, dan teknologi modern. Portofolio ini mendokumentasikan perjalanan belajar dan karya-karya digital yang saya bangun.
+            </p>
+            
+            <!-- Media Sosial & Email Button -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:yusuf.abdurahman144@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2.5 rounded transition-colors inline-flex items-center gap-2">
+                    <i class="fa-solid fa-envelope"></i> Hubungi via Gmail
+                </a>
+                <div class="flex items-center gap-4 bg-gray-900 border border-gray-800 px-4 py-2 rounded">
+                    <a href="https://instagram.com/pnggilcupaj." target="_blank" class="text-gray-400 hover:text-blue-500 text-xl transition-colors" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank" class="text-gray-400 hover:text-blue-500 text-xl transition-colors" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://youtube.com" target="_blank" class="text-gray-400 hover:text-blue-500 text-xl transition-colors" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KARYA SAYA (PROJECTS SECTION) -->
+    <section id="projects" class="bg-white text-black py-24 min-h-screen flex items-center">
+        <div class="max-w-6xl mx-auto px-4 w-full">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold uppercase tracking-wider">Karya Saya</h2>
+                <div class="h-1 w-16 bg-blue-600 mx-auto mt-4"></div>
+                <p class="text-gray-600 mt-4 text-sm md:text-base">Eksplorasi proyek coding dan aplikasi yang telah saya selesaikan.</p>
+            </div>
+            
+            <!-- Grid List Karya -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                
+                <!-- KARYA 1: GAME PIKSEL PERTAMA -->
+                <div class="group border-2 border-black rounded-lg overflow-hidden bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all flex flex-col justify-between">
+                    <div>
+                        <!-- Tempat Gambar Kode & Hasil Project 1 -->
+                        <div class="grid grid-cols-2 h-52 bg-gray-900 border-b-2 border-black overflow-hidden">
+                            <div class="relative overflow-hidden">
+                                <img src="assets/game-code.jpg.png" alt="Code Project 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="hidden absolute inset-0 bg-black/70 text-white text-xs font-bold items-center justify-center p-2 text-center">[ Gagal memuat assets/game-code.jpg ]</div>
+                            </div>
+                            <div class="relative overflow-hidden border-l border-gray-800">
+                                <img src="assets/game-result.jpg.png" alt="Hasil Project 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="hidden absolute inset-0 bg-black/70 text-white text-xs font-bold items-center justify-center p-2 text-center">[ Gagal memuat assets/game-result.jpg ]</div>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2 gap-2">
+                                <h3 class="font-bold text-xl text-black">Pixel Collector - Game Piksel Pertama</h3>
+                                <span class="text-xs font-bold bg-blue-600 text-white px-2 py-1 rounded shrink-0">Terbaru</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Pengembangan game berbasis 2D piksel menggunakan bahasa pemrograman Python dan library Pygame. Proyek ini melatih implementasi struktur logika <i>game loop</i>, inisialisasi koordinat objek, rendering warna RGB, manipulasi FPS, serta sistem kalkulasi skor real-time.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[11px] font-bold bg-black text-white px-2.5 py-1 rounded">Python</span>
+                            <span class="text-[11px] font-bold bg-blue-100 text-blue-800 px-2.5 py-1 rounded">Pygame</span>
+                            <span class="text-[11px] font-bold bg-gray-200 text-gray-800 px-2.5 py-1 rounded">Algoritma</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KARYA 2: DOKUMENTASI PRAKTIKUM (Sudah Ditambahkan Tempat Gambar Hasil Karya) -->
+                <div class="group border-2 border-black rounded-lg overflow-hidden bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all flex flex-col justify-between">
+                    <div>
+                        <!-- Tempat Gambar Hasil Karya 2 -->
+                        <div class="h-52 bg-gray-900 border-b-2 border-black overflow-hidden relative">
+                            <img src="assets/praktikum.jpg" alt="Hasil Praktikum" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="hidden absolute inset-0 bg-black/80 text-white text-xs font-bold items-center justify-center p-2 text-center flex-col gap-2">
+                                <i class="fa-solid fa-file-code text-2xl text-blue-400"></i>
+                                <span>[ Simpan foto tugas Anda di assets/praktikum.jpg ]</span>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2 text-black">Dokumentasi Praktikum Pemrograman</h3>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Kumpulan analisis pemecahan masalah komputasi dasar dan dokumentasi algoritma pemrograman semester 1 Teknik Informatika.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="px-6 pb-6">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[11px] font-bold bg-black text-white px-2.5 py-1 rounded">C++</span>
+                            <span class="text-[11px] font-bold bg-blue-100 text-blue-800 px-2.5 py-1 rounded">Markdown</span>
+                            <span class="text-[11px] font-bold bg-gray-200 text-gray-800 px-2.5 py-1 rounded">Struktur Data</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-black text-white py-12 border-t border-gray-900">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div class="text-center sm:text-left">
+                <p class="text-blue-500 font-bold mb-1">Yusuf Abdurahman Sidik</p>
+                <p class="text-gray-500 text-xs">Teknik Informatika • Universitas Widyatama</p>
+            </div>
+            <p class="text-xs text-gray-500">&copy; 2026 Yusuf.AS. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
