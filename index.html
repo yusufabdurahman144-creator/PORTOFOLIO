@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,22 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- CDN Font Awesome resmi untuk ikon medsos & kontak -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- STYLESHEET ANIMASI FLOAT & REVEAL (BUBBLE MASUK) -->
     <style>
         /* Animasi Mengambang (Floating) */
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
         }
+
         .animate-float {
             animation: float 4s ease-in-out infinite;
         }
@@ -27,70 +36,102 @@
             transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
             will-change: opacity, transform;
         }
+
         .reveal-card.active {
             opacity: 1;
             transform: translateY(0px) scale(1);
         }
 
         /* Variasi Delay Animasi */
-        .delay-1 { animation-delay: 0.2s; transition-delay: 0.15s; }
-        .delay-2 { animation-delay: 0.4s; transition-delay: 0.3s; }
-        .delay-3 { animation-delay: 0.6s; transition-delay: 0.45s; }
+        .delay-1 {
+            animation-delay: 0.2s;
+            transition-delay: 0.15s;
+        }
+
+        .delay-2 {
+            animation-delay: 0.4s;
+            transition-delay: 0.3s;
+        }
+
+        .delay-3 {
+            animation-delay: 0.6s;
+            transition-delay: 0.45s;
+        }
     </style>
 </head>
+
 <body class="bg-white text-black font-sans antialiased scroll-smooth">
 
     <!-- NAVIGATION BAR -->
     <header class="sticky top-0 z-50 bg-black text-white border-b border-gray-800">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold tracking-wider text-blue-500">Portofolio
-            <nav class="space-x-6 text-sm font-medium hidden md:block">
-                <a href="#about" class="hover:text-blue-500 transition-colors">About Me</a>
-                <a href="#background" class="hover:text-blue-500 transition-colors">Keahlian & Studi</a>
-                <a href="#projects" class="hover:text-blue-500 transition-colors">Karya Saya</a>
-                <a href="#contact-section" class="hover:text-blue-500 transition-colors">Kontak</a>
-            </nav>
+                <nav class="space-x-6 text-sm font-medium hidden md:block">
+                    <a href="#about" class="hover:text-blue-500 transition-colors">About Me</a>
+                    <a href="#background" class="hover:text-blue-500 transition-colors">Keahlian & Studi</a>
+                    <a href="#projects" class="hover:text-blue-500 transition-colors">Karya Saya</a>
+                    <a href="#contact-section" class="hover:text-blue-500 transition-colors">Kontak</a>
+                </nav>
         </div>
     </header>
 
     <!-- ABOUT ME SECTION -->
     <section id="about" class="bg-black text-white py-24 border-b border-gray-900">
         <div class="max-w-4xl mx-auto px-4 text-center flex flex-col items-center">
-            
+
             <!-- FOTO PROFIL (Dengan Animasi Mengambang) -->
-            <div class="mb-6 w-36 h-36 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg bg-gray-800 flex items-center justify-center relative group animate-float reveal-card">
-                <img src="assets/foto-profil.jpeg" alt="Foto Profil Yusuf Abdurahman Sidik" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="hidden absolute inset-0 bg-gray-800 text-gray-400 text-xs font-bold items-center justify-center text-center p-2">
+            <div
+                class="mb-6 w-36 h-36 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg bg-gray-800 flex items-center justify-center relative group animate-float reveal-card">
+                <img src="assets/foto-profil.jpeg" alt="Foto Profil Yusuf Abdurahman Sidik"
+                    class="w-full h-full object-cover"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div
+                    class="hidden absolute inset-0 bg-gray-800 text-gray-400 text-xs font-bold items-center justify-center text-center p-2">
                     [ assets/foto-profil.jpg ]
                 </div>
             </div>
 
-            <span class="text-blue-500 font-semibold tracking-wider text-sm uppercase block mb-2 reveal-card">Halo, Selamat Datang</span>
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight reveal-card delay-1">Yusuf Abdurahman Sidik</h1>
-            
-            <div class="inline-block bg-blue-950/40 border border-blue-500 text-blue-400 px-4 py-1.5 rounded-full text-sm font-medium mb-6 reveal-card delay-1">
+            <span class="text-blue-500 font-semibold tracking-wider text-sm uppercase block mb-2 reveal-card">Halo,
+                Selamat Datang</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tight reveal-card delay-1">Yusuf Abdurahman
+                Sidik</h1>
+
+            <div
+                class="inline-block bg-blue-950/40 border border-blue-500 text-blue-400 px-4 py-1.5 rounded-full text-sm font-medium mb-6 reveal-card delay-1">
                 Mahasiswa Semester 1 • Prodi Teknik Informatika • Universitas Widyatama
             </div>
-            
+
             <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-8 leading-relaxed reveal-card delay-2">
-                Saya adalah seorang mahasiswa aktif dibidang Teknik Informatika dengan latar belakang Teknik Komputer & Jaringan (TKJ). Berfokus mempelajari pengembangan web, algoritma, serta pemeliharaan infrastruktur jaringan.
+                Saya adalah seorang mahasiswa aktif dibidang Teknik Informatika dengan latar belakang Teknik Komputer &
+                Jaringan (TKJ). Berfokus mempelajari pengembangan web, algoritma, serta pemeliharaan infrastruktur
+                jaringan.
             </p>
-            
+
             <!-- Tombol Aksi: Gmail, Download CV, & Media Sosial -->
             <div class="flex flex-wrap justify-center gap-4 items-center reveal-card delay-3">
-                <a href="mailto:yusuf.abdurahman144@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2.5 rounded transition-colors inline-flex items-center gap-2">
+                <a href="mailto:yusuf.abdurahman144@gmail.com"
+                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2.5 rounded transition-colors inline-flex items-center gap-2">
                     <i class="fa-solid fa-envelope"></i> Hubungi via Gmail
                 </a>
 
-                <a href="assets/CV_Yusuf_Abdurahman_Sidik.pdf" download="CV_Yusuf_Abdurahman_Sidik.pdf" class="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-semibold px-6 py-2.5 rounded transition-colors inline-flex items-center gap-2">
+                <a href="assets/CV_Yusuf_Abdurahman_Sidik.pdf" download="CV_Yusuf_Abdurahman_Sidik.pdf"
+                    class="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-semibold px-6 py-2.5 rounded transition-colors inline-flex items-center gap-2">
                     <i class="fa-solid fa-download"></i> Download CV
                 </a>
 
                 <div class="flex items-center gap-4 bg-gray-900 border border-gray-800 px-4 py-2.5 rounded">
-                    <a href="https://linkedin.com/in/yusuf-abdurahman-sidik" target="_blank" class="text-gray-400 hover:text-blue-500 text-xl transition-colors" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://instagram.com/pnggilcupaj." target="_blank" class="text-gray-400 hover:text-blue-500 text-xl transition-colors" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://tiktok.com" target="_blank" class="text-gray-400 hover:text-blue-500 text-xl transition-colors" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                    <a href="https://youtube.com" target="_blank" class="text-gray-400 hover:text-blue-500 text-xl transition-colors" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/in/yusuf-abdurahman-sidik-100608tgllhr?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"
+                        class="text-gray-400 hover:text-blue-500 text-xl transition-colors" title="LinkedIn"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://instagram.com/pnggilcupaj." target="_blank"
+                        class="text-gray-400 hover:text-blue-500 text-xl transition-colors" title="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@cuppxyz._?_r=1&_t=ZS-99mN5j1TkbS" target="_blank"
+                        class="text-gray-400 hover:text-blue-500 text-xl transition-colors" title="TikTok"><i
+                            class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://youtube.com" target="_blank"
+                        class="text-gray-400 hover:text-blue-500 text-xl transition-colors" title="YouTube"><i
+                            class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
         </div>
@@ -98,14 +139,15 @@
 
     <!-- CONTAINER KEAHLIAN & STUDI -->
     <section id="background">
-        
+
         <!-- DIAGRAM DATA & SKILL -->
         <div id="skills" class="bg-gray-950 text-white py-20 border-b border-gray-900">
             <div class="max-w-5xl mx-auto px-4">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-extrabold uppercase tracking-wider text-blue-500">Diagram Data & Skill</h2>
                     <div class="h-1 w-16 bg-blue-600 mx-auto mt-3"></div>
-                    <p class="text-gray-400 mt-3 text-sm">Tingkat keahlian teknis berdasarkan rentang waktu pengalaman yang dipelajari.</p>
+                    <p class="text-gray-400 mt-3 text-sm">Tingkat keahlian teknis berdasarkan rentang waktu pengalaman
+                        yang dipelajari.</p>
                 </div>
 
                 <div class="space-y-8">
@@ -119,7 +161,8 @@
                             <span class="text-sm font-bold text-blue-500">90%</span>
                         </div>
                         <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
-                            <div class="progress-bar bg-blue-600 h-3 rounded-full w-0 transition-all duration-1000 ease-out" data-target="90%"></div>
+                            <div class="progress-bar bg-blue-600 h-3 rounded-full w-0 transition-all duration-1000 ease-out"
+                                data-target="90%"></div>
                         </div>
                     </div>
 
@@ -133,7 +176,8 @@
                             <span class="text-sm font-bold text-blue-500">80%</span>
                         </div>
                         <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
-                            <div class="progress-bar bg-blue-600 h-3 rounded-full w-0 transition-all duration-1000 ease-out" data-target="80%"></div>
+                            <div class="progress-bar bg-blue-600 h-3 rounded-full w-0 transition-all duration-1000 ease-out"
+                                data-target="80%"></div>
                         </div>
                     </div>
 
@@ -142,12 +186,14 @@
                         <div class="flex justify-between items-center mb-2">
                             <div>
                                 <h3 class="font-bold text-lg text-white">Pemrograman Python & Logika Game 2D</h3>
-                                <span class="text-xs text-blue-400 font-medium">Periode: 2026 - Sekarang (Semester 1 IT)</span>
+                                <span class="text-xs text-blue-400 font-medium">Periode: 2026 - Sekarang (Semester 1
+                                    IT)</span>
                             </div>
                             <span class="text-sm font-bold text-blue-500">25%</span>
                         </div>
                         <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
-                            <div class="progress-bar bg-blue-600 h-3 rounded-full w-0 transition-all duration-1000 ease-out" data-target="25%"></div>
+                            <div class="progress-bar bg-blue-600 h-3 rounded-full w-0 transition-all duration-1000 ease-out"
+                                data-target="25%"></div>
                         </div>
                     </div>
 
@@ -156,12 +202,14 @@
                         <div class="flex justify-between items-center mb-2">
                             <div>
                                 <h3 class="font-bold text-lg text-white">Web Development (HTML, Tailwind CSS) & C++</h3>
-                                <span class="text-xs text-blue-400 font-medium">Periode: 2026 – Sekarang (Semester 1 IT)</span>
+                                <span class="text-xs text-blue-400 font-medium">Periode: 2026 – Sekarang (Semester 1
+                                    IT)</span>
                             </div>
                             <span class="text-sm font-bold text-blue-500">20%</span>
                         </div>
                         <div class="w-full bg-gray-800 rounded-full h-3 overflow-hidden">
-                            <div class="progress-bar bg-blue-600 h-3 rounded-full w-0 transition-all duration-1000 ease-out" data-target="20%"></div>
+                            <div class="progress-bar bg-blue-600 h-3 rounded-full w-0 transition-all duration-1000 ease-out"
+                                data-target="20%"></div>
                         </div>
                     </div>
                 </div>
@@ -174,33 +222,40 @@
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-extrabold uppercase tracking-wider">Riwayat Studi</h2>
                     <div class="h-1 w-16 bg-blue-600 mx-auto mt-3"></div>
-                    <p class="text-gray-600 mt-3 text-sm">Latar belakang pendidikan formal yang telah dan sedang saya tempuh.</p>
+                    <p class="text-gray-600 mt-3 text-sm">Latar belakang pendidikan formal yang telah dan sedang saya
+                        tempuh.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Kotak Studi 1 -->
-                    <div class="bg-white p-6 rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] reveal-card animate-float">
+                    <div
+                        class="bg-white p-6 rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] reveal-card animate-float">
                         <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-bold bg-blue-100 text-blue-800 px-3 py-1 rounded-full">2026 - Sekarang</span>
+                            <span class="text-xs font-bold bg-blue-100 text-blue-800 px-3 py-1 rounded-full">2026 -
+                                Sekarang</span>
                             <i class="fa-solid fa-graduation-cap text-2xl text-blue-600"></i>
                         </div>
                         <h3 class="text-xl font-bold">Universitas Widyatama</h3>
                         <p class="text-blue-600 font-medium text-sm mb-3">S1 Teknik Informatika</p>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Fokus pada pengembangan perangkat lunak, pemrograman web, struktur data, dan rekayasa sistem komputer modern.
+                            Fokus pada pengembangan perangkat lunak, pemrograman web, struktur data, dan rekayasa sistem
+                            komputer modern.
                         </p>
                     </div>
 
                     <!-- Kotak Studi 2 -->
-                    <div class="bg-white p-6 rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] reveal-card delay-1 animate-float">
+                    <div
+                        class="bg-white p-6 rounded-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] reveal-card delay-1 animate-float">
                         <div class="flex items-center justify-between mb-2">
-                            <span class="text-xs font-bold bg-gray-200 text-gray-800 px-3 py-1 rounded-full">2023 - 2026</span>
+                            <span class="text-xs font-bold bg-gray-200 text-gray-800 px-3 py-1 rounded-full">2023 -
+                                2026</span>
                             <i class="fa-solid fa-school text-2xl text-gray-700"></i>
                         </div>
                         <h3 class="text-xl font-bold">SMK ICB Cinta Teknika Bandung</h3>
                         <p class="text-blue-600 font-medium text-sm mb-3">Teknik Komputer dan Jaringan (TKJ)</p>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Mempelajari dasar-dasar jaringan komputer, krimp kabel LAN/Fiber, pemeliharaan server, dan konfigurasi Mikrotik Router.
+                            Mempelajari dasar-dasar jaringan komputer, krimp kabel LAN/Fiber, pemeliharaan server, dan
+                            konfigurasi Mikrotik Router.
                         </p>
                     </div>
                 </div>
@@ -213,32 +268,49 @@
                 <div class="text-center mb-14">
                     <h2 class="text-3xl font-extrabold uppercase tracking-wider text-blue-500">Maintenance Jaringan</h2>
                     <div class="h-1 w-16 bg-blue-600 mx-auto mt-3"></div>
-                    <p class="text-gray-400 mt-3 text-sm">SOP Alur Pemeliharaan & Troubleshooting Infrastructure Jaringan yang Saya Terapkan.</p>
+                    <p class="text-gray-400 mt-3 text-sm">SOP Alur Pemeliharaan & Troubleshooting Infrastructure
+                        Jaringan yang Saya Terapkan.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
-                    <div class="bg-gray-900 border border-gray-800 p-6 rounded-lg relative text-center group hover:border-blue-500 transition-colors reveal-card animate-float">
-                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">1</div>
+                    <div
+                        class="bg-gray-900 border border-gray-800 p-6 rounded-lg relative text-center group hover:border-blue-500 transition-colors reveal-card animate-float">
+                        <div
+                            class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                            1</div>
                         <h3 class="font-bold text-lg mb-2 text-blue-400">Monitoring & Pengecekan Rutin</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Pemeriksaan fisik Router, Switch, Access Point (AP), serta pemantauan bandwidth jaringan secara periodik.</p>
+                        <p class="text-gray-400 text-xs leading-relaxed">Pemeriksaan fisik Router, Switch, Access Point
+                            (AP), serta pemantauan bandwidth jaringan secara periodik.</p>
                     </div>
 
-                    <div class="bg-gray-900 border border-gray-800 p-6 rounded-lg relative text-center group hover:border-blue-500 transition-colors reveal-card delay-1 animate-float">
-                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">2</div>
+                    <div
+                        class="bg-gray-900 border border-gray-800 p-6 rounded-lg relative text-center group hover:border-blue-500 transition-colors reveal-card delay-1 animate-float">
+                        <div
+                            class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                            2</div>
                         <h3 class="font-bold text-lg mb-2 text-blue-400">Deteksi Troubleshooting</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Melakukan analisa saat terjadi kendala jaringan (packet loss, IP conflict, kabel putus, atau drop bandwidth).</p>
+                        <p class="text-gray-400 text-xs leading-relaxed">Melakukan analisa saat terjadi kendala jaringan
+                            (packet loss, IP conflict, kabel putus, atau drop bandwidth).</p>
                     </div>
 
-                    <div class="bg-gray-900 border border-gray-800 p-6 rounded-lg relative text-center group hover:border-blue-500 transition-colors reveal-card delay-2 animate-float">
-                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">3</div>
+                    <div
+                        class="bg-gray-900 border border-gray-800 p-6 rounded-lg relative text-center group hover:border-blue-500 transition-colors reveal-card delay-2 animate-float">
+                        <div
+                            class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                            3</div>
                         <h3 class="font-bold text-lg mb-2 text-blue-400">Tindakan Perbaikan</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Re-crimping kabel, konfigurasi ulang IP/Winbox Mikrotik, reboot hardware, atau perbaikan modul port switch.</p>
+                        <p class="text-gray-400 text-xs leading-relaxed">Re-crimping kabel, konfigurasi ulang IP/Winbox
+                            Mikrotik, reboot hardware, atau perbaikan modul port switch.</p>
                     </div>
 
-                    <div class="bg-gray-900 border border-gray-800 p-6 rounded-lg relative text-center group hover:border-blue-500 transition-colors reveal-card delay-3 animate-float">
-                        <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">4</div>
+                    <div
+                        class="bg-gray-900 border border-gray-800 p-6 rounded-lg relative text-center group hover:border-blue-500 transition-colors reveal-card delay-3 animate-float">
+                        <div
+                            class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                            4</div>
                         <h3 class="font-bold text-lg mb-2 text-blue-400">Pengujian & Dokumentasi</h3>
-                        <p class="text-gray-400 text-xs leading-relaxed">Uji coba latensi & kecepatan koneksi, dilanjutkan mencatat laporan log maintenance teknis secara tertulis.</p>
+                        <p class="text-gray-400 text-xs leading-relaxed">Uji coba latensi & kecepatan koneksi,
+                            dilanjutkan mencatat laporan log maintenance teknis secara tertulis.</p>
                     </div>
                 </div>
             </div>
@@ -252,59 +324,82 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-extrabold uppercase tracking-wider">Karya Saya</h2>
                 <div class="h-1 w-16 bg-blue-600 mx-auto mt-4"></div>
-                <p class="text-gray-600 mt-4 text-sm md:text-base">Eksplorasi proyek coding dan aplikasi yang telah saya selesaikan.</p>
+                <p class="text-gray-600 mt-4 text-sm md:text-base">Eksplorasi proyek coding dan aplikasi yang telah saya
+                    selesaikan.</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
                 <!-- KARYA 1 -->
-                <div class="group border-2 border-black rounded-lg overflow-hidden bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none transition-all flex flex-col justify-between reveal-card animate-float">
-                    <div>
-                        <div class="grid grid-cols-2 h-52 bg-gray-900 border-b-2 border-black overflow-hidden">
-                            <div class="relative overflow-hidden">
-                                <img src="assets/game-code.png" alt="Code Project 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="hidden absolute inset-0 bg-black/70 text-white text-xs font-bold items-center justify-center p-2 text-center">[ assets/game-code.jpg ]</div>
+                <a href="https://github.com/yusufabdurahman144-creator/pixelgame1" target="_blank">
+                    <div
+                        class="group border-2 border-black rounded-lg overflow-hidden bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none transition-all flex flex-col justify-between reveal-card animate-float">
+                        <div>
+                            <div class="grid grid-cols-2 h-52 bg-gray-900 border-b-2 border-black overflow-hidden">
+                                <div class="relative overflow-hidden">
+                                    <img src="assets/game-code.png" alt="Code Project 1"
+                                        class="w-full h-full object-cover"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div
+                                        class="hidden absolute inset-0 bg-black/70 text-white text-xs font-bold items-center justify-center p-2 text-center">
+                                        [ assets/game-code.jpg ]</div>
+                                </div>
+                                <div class="relative overflow-hidden border-l border-gray-800">
+                                    <img src="assets/game-result.png" alt="Hasil Project 1"
+                                        class="w-full h-full object-cover"
+                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div
+                                        class="hidden absolute inset-0 bg-black/70 text-white text-xs font-bold items-center justify-center p-2 text-center">
+                                        [ assets/game-result.jpg ]</div>
+                                </div>
                             </div>
-                            <div class="relative overflow-hidden border-l border-gray-800">
-                                <img src="assets/game-result.png" alt="Hasil Project 1" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                <div class="hidden absolute inset-0 bg-black/70 text-white text-xs font-bold items-center justify-center p-2 text-center">[ assets/game-result.jpg ]</div>
-                            </div>
-                        </div>
-                        
-                        <div class="p-6">
-                            <div class="flex justify-between items-start mb-2 gap-2">
-                                <h3 class="font-bold text-xl text-black">Pixel Collector - Game Piksel Pertama</h3>
-                                <span class="text-xs font-bold bg-blue-600 text-white px-2 py-1 rounded shrink-0">Terbaru</span>
-                            </div>
-                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
-                                Pengembangan game berbasis 2D piksel menggunakan bahasa pemrograman Python dan library Pygame. Proyek ini melatih implementasi struktur logika <i>game loop</i>, inisialisasi koordinat objek, rendering warna RGB, manipulasi FPS, serta sistem kalkulasi skor real-time.
-                            </p>
-                        </div>
-                    </div>
 
-                    <div class="px-6 pb-6">
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-[11px] font-bold bg-black text-white px-2.5 py-1 rounded">Python</span>
-                            <span class="text-[11px] font-bold bg-blue-100 text-blue-800 px-2.5 py-1 rounded">Pygame</span>
-                            <span class="text-[11px] font-bold bg-gray-200 text-gray-800 px-2.5 py-1 rounded">Algoritma</span>
+                            <div class="p-6">
+                                <div class="flex justify-between items-start mb-2 gap-2">
+                                    <h3 class="font-bold text-xl text-black">Pixel Collector - Game Piksel Pertama</h3>
+                                    <span
+                                        class="text-xs font-bold bg-blue-600 text-white px-2 py-1 rounded shrink-0">Terbaru</span>
+                                </div>
+                                <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                    Pengembangan game berbasis 2D piksel menggunakan bahasa pemrograman Python dan
+                                    library Pygame. Proyek ini melatih implementasi struktur logika <i>game loop</i>,
+                                    inisialisasi koordinat objek, rendering warna RGB, manipulasi FPS, serta sistem
+                                    kalkulasi skor real-time.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="px-6 pb-6">
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-[11px] font-bold bg-black text-white px-2.5 py-1 rounded">Python</span>
+                                <span
+                                    class="text-[11px] font-bold bg-blue-100 text-blue-800 px-2.5 py-1 rounded">Pygame</span>
+                                <span
+                                    class="text-[11px] font-bold bg-gray-200 text-gray-800 px-2.5 py-1 rounded">Algoritma</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- KARYA 2 -->
-                <div class="group border-2 border-black rounded-lg overflow-hidden bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none transition-all flex flex-col justify-between reveal-card delay-1 animate-float">
+                <div
+                    class="group border-2 border-black rounded-lg overflow-hidden bg-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-none transition-all flex flex-col justify-between reveal-card delay-1 animate-float">
                     <div>
                         <div class="h-52 bg-gray-900 border-b-2 border-black overflow-hidden relative">
-                            <img src="assets/praktikum.jpg" alt="Hasil Praktikum" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="hidden absolute inset-0 bg-black/80 text-white text-xs font-bold items-center justify-center p-2 text-center flex-col gap-2">
+                            <img src="assets/praktikum.jpg" alt="Hasil Praktikum" class="w-full h-full object-cover"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div
+                                class="hidden absolute inset-0 bg-black/80 text-white text-xs font-bold items-center justify-center p-2 text-center flex-col gap-2">
                                 <i class="fa-solid fa-file-code text-2xl text-blue-400"></i>
                                 <span>[ Simpan foto tugas Anda di assets/praktikum.jpg ]</span>
                             </div>
                         </div>
-                        
+
                         <div class="p-6">
                             <h3 class="font-bold text-xl mb-2 text-black">Dokumentasi Praktikum Pemrograman</h3>
                             <p class="text-gray-600 text-sm mb-4 leading-relaxed">
-                                Kumpulan analisis pemecahan masalah komputasi dasar dan dokumentasi algoritma pemrograman semester 1 Teknik Informatika.
+                                Kumpulan analisis pemecahan masalah komputasi dasar dan dokumentasi algoritma
+                                pemrograman semester 1 Teknik Informatika.
                             </p>
                         </div>
                     </div>
@@ -312,8 +407,10 @@
                     <div class="px-6 pb-6">
                         <div class="flex flex-wrap gap-2">
                             <span class="text-[11px] font-bold bg-black text-white px-2.5 py-1 rounded">C++</span>
-                            <span class="text-[11px] font-bold bg-blue-100 text-blue-800 px-2.5 py-1 rounded">Markdown</span>
-                            <span class="text-[11px] font-bold bg-gray-200 text-gray-800 px-2.5 py-1 rounded">Struktur Data</span>
+                            <span
+                                class="text-[11px] font-bold bg-blue-100 text-blue-800 px-2.5 py-1 rounded">Markdown</span>
+                            <span class="text-[11px] font-bold bg-gray-200 text-gray-800 px-2.5 py-1 rounded">Struktur
+                                Data</span>
                         </div>
                     </div>
                 </div>
@@ -328,15 +425,18 @@
             <div class="text-center mb-14">
                 <h2 class="text-3xl font-extrabold uppercase tracking-wider text-blue-500">Contact Me</h2>
                 <div class="h-1 w-16 bg-blue-600 mx-auto mt-3"></div>
-                <p class="text-gray-400 mt-3 text-sm">Jangan ragu untuk menghubungi saya untuk diskusi proyek atau kesempatan kerja sama.</p>
+                <p class="text-gray-400 mt-3 text-sm">Jangan ragu untuk menghubungi saya untuk diskusi proyek atau
+                    kesempatan kerja sama.</p>
             </div>
 
             <!-- Grid Kontak 3 Kolom -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
+
                 <!-- Email/Gmail Card -->
-                <a href="mailto:yusuf.abdurahman144@gmail.com" class="bg-gray-900 border border-gray-800 p-8 rounded-xl text-center group hover:border-blue-500 transition-all shadow-lg hover:translate-y-1 reveal-card animate-float">
-                    <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                <a href="mailto:yusuf.abdurahman144@gmail.com"
+                    class="bg-gray-900 border border-gray-800 p-8 rounded-xl text-center group hover:border-blue-500 transition-all shadow-lg hover:translate-y-1 reveal-card animate-float">
+                    <div
+                        class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <h3 class="font-bold text-lg mb-1 text-white">Gmail</h3>
@@ -344,8 +444,10 @@
                 </a>
 
                 <!-- No Telepon / WhatsApp Card -->
-                <a href="https://wa.me/6283873768466" target="_blank" class="bg-gray-900 border border-gray-800 p-8 rounded-xl text-center group hover:border-blue-500 transition-all shadow-lg hover:translate-y-1 reveal-card delay-1 animate-float">
-                    <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                <a href="https://wa.me/6283873768466" target="_blank"
+                    class="bg-gray-900 border border-gray-800 p-8 rounded-xl text-center group hover:border-blue-500 transition-all shadow-lg hover:translate-y-1 reveal-card delay-1 animate-float">
+                    <div
+                        class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <h3 class="font-bold text-lg mb-1 text-white">No. Telepon / WA</h3>
@@ -353,8 +455,10 @@
                 </a>
 
                 <!-- Alamat Rumah Card -->
-                <div class="bg-gray-900 border border-gray-800 p-8 rounded-xl text-center group hover:border-blue-500 transition-all shadow-lg reveal-card delay-2 animate-float">
-                    <div class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                <div
+                    class="bg-gray-900 border border-gray-800 p-8 rounded-xl text-center group hover:border-blue-500 transition-all shadow-lg reveal-card delay-2 animate-float">
+                    <div
+                        class="w-14 h-14 bg-blue-600/20 text-blue-500 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <h3 class="font-bold text-lg mb-1 text-white">Tinggal</h3>
@@ -407,4 +511,5 @@
     </script>
 
 </body>
+
 </html>
